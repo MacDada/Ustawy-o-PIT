@@ -16,8 +16,8 @@ jobs:
       PDF_DIR_NAME: Ustawy o PIT - PDF
     steps:
       - uses: actions/checkout@v3
-#       - name: install wkhtmltopdf
-#         run: sudo apt-get install -y wkhtmltopdf      
+      - name: Aktualizacja dostępnych zależności
+        run: sudo apt-get update
       - name: Instalacja LaTeX-a
         run: sudo apt-get install -y texlive-latex-extra
       - name: Instalacja Pandoc-a
@@ -26,10 +26,10 @@ jobs:
         run: |
           # Włącza wyświetlanie wykonywanych poleceń
           set -x
-          
-          cd "wersje tekstowe" || exit
 
           mkdir "${{ env.PDF_DIR_NAME }}"
+
+          cd "wersje tekstowe" || exit
 
           for md_file in ./*.md; do
             # https://pandoc.org/MANUAL.html#layout
@@ -45,7 +45,7 @@ jobs:
               --variable fontsize=12pt \
               --variable header-includes="\hyphenpenalty=10000" \
               --variable header-includes="\exhyphenpenalty=10000" \
-              --output "${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
+              --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
           done       
 #       - name: Generate PDF with pandoc
 #         run: |
