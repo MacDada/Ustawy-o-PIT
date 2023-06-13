@@ -1,0 +1,84 @@
+name: Wersje tekstowe do PDF
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'wersje tekstowe/**.md'
+
+jobs:
+  wersje_tekstowe_do_pdf:
+    name: Tworzenie PDFow z wersji tekstowych
+    runs-on: ubuntu-latest
+    env: 
+#       CI_COMMIT_MESSAGE: Pliki PDF utworzone na podstawie wersji tekstowych
+#       CI_COMMIT_AUTHOR: Automat
+      PDF_DIR_NAME: Ustawy o PIT - PDF
+    steps:
+      - uses: actions/checkout@v3
+#       - name: install wkhtmltopdf
+#         run: sudo apt-get install -y wkhtmltopdf      
+      - name: Instalacja LaTeX-a
+        run: sudo apt-get install -y texlive-latex-extra
+      - name: Instalacja Pandoc-a
+        run: sudo apt-get install -y pandoc
+      - name: Generowanie PDFów na podstawie plików Markdown
+        run: |
+          # Włącza wyświetlanie wykonywanych poleceń
+          set -x
+          
+          cd "wersje tekstowe" || exit
+
+          mkdir "${{ env.PDF_DIR_NAME }}"
+
+          for md_file in ./*.md; do
+            # https://pandoc.org/MANUAL.html#layout
+            # https://pandoc.org/MANUAL.html#fonts
+            # https://texfaq.org/FAQ-hyphoff
+            # https://stackoverflow.com/a/76329457/666907
+            pandoc \
+              "${md_file}" \
+              --fail-if-warnings \
+              --pdf-engine pdflatex \
+              --variable geometry:a4paper \
+              --variable geometry:margin=2.5cm \
+              --variable fontsize=12pt \
+              --variable header-includes="\hyphenpenalty=10000" \
+              --variable header-includes="\exhyphenpenalty=10000" \
+              --output "${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
+          done       
+#       - name: Generate PDF with pandoc
+#         run: |
+#           mkdir "wersje pdf"
+#           cd "wersje tekstowe"
+#           find . -name '*.md' -type f -exec sh -c 'pandoc "{}" --pdf-engine=wkhtmltopdf -o "../wersje pdf/{}.pdf"' \;
+#           cd ../
+#           cd "wersje pdf"
+#           for f in ./*; do mv "$f" "${f%.md.pdf}.pdf" ; done
+#       - uses: baileyjm02/markdown-to-pdf@v1.2.0
+#         with:
+#           input_path: wersje tekstowe
+#           output_dir: Ustawy - format PDF
+#           # Default is true, can set to false to only get PDF files
+#           build_html: false
+# #           build_pdf: true
+#       - name: Install wkhtmltopdf
+#         run: sudo apt-get install -y wkhtmltopdf
+#       - name: Install fonts
+# #         run: sudo apt-get install -y fonts-dejavu-core
+#       - name: Convert to PDF
+#         run: |
+#           cd wersje\ tekstowe
+#           find . -name '*.md' -type f -exec sh -c 'wkhtmltopdf --enable-local-file-access --margin-top 0mm --margin-right 0mm --margin-bottom 0mm --margin-left 0mm --page-size A4 --no-background --no-outline --dpi 300 --footer-spacing 0 -T 0mm -R 0mm -B 0mm -L 0mm --header-spacing 0 -t pdf --encoding utf-8 --quiet --quiet "{}" "../wersje pdf/{}.pdf"' \;
+#       - name: GIT commit+push wygenerowane pliki PDF
+#         run: |
+#           pwd
+#           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+#           git config --global user.email "username@users.noreply.github.com"
+#           git add "wersje pdf"
+#           git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+#           git push          
+      - uses: actions/upload-artifact@v3.1.2
+        with:
+          name: ${{ env.PDF_DIR_NAME }}
+          path: ${{ env.PDF_DIR_NAME }}
