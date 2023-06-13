@@ -147,6 +147,7 @@ Przepisy dotyczące sukcesji przedsiębiorstwa w kontekście ciągłości rozlic
 **Kluczowe, w kontekście powyższych zmian, planowane zmiany w zakresie innych ustaw:**
 
 
+
 - Brak odliczenia składek społecznych od przychodu w przypadku osób fizycznych nieprowadzących działalności gospodarczej, za to składki odpowiednio niższe.
 - Brak proporcjonalnej składki zdrowotnej, a jedynie zryczałtowana, dla przedsiębiorców może stanowić KUP.
 - ZUS dla przedsiębiorców dobrowolny, może stanowić KUP.
