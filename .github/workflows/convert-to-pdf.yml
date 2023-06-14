@@ -47,7 +47,9 @@ jobs:
               --variable header-includes="\hyphenpenalty=10000" \
               --variable header-includes="\exhyphenpenalty=10000" \
               --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
-          done       
+          done
+
+          ls -alh ../${{ env.PDF_DIR_NAME }}/*
 #       - name: Generate PDF with pandoc
 #         run: |
 #           mkdir "wersje pdf"
