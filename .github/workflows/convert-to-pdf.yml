@@ -7,7 +7,7 @@ on: [push, pull_request]
 #      - 'wersje tekstowe/**.md'
 
 jobs:
-  wersje_tekstowe_do_pdf:
+  generate_pdfs:
     name: Tworzenie PDFow z wersji tekstowych
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
@@ -48,31 +48,6 @@ jobs:
               --variable header-includes="\exhyphenpenalty=10000" \
               --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
           done
-
-          ls "../${{ env.PDF_DIR_NAME }}/"
-#       - name: Generate PDF with pandoc
-#         run: |
-#           mkdir "wersje pdf"
-#           cd "wersje tekstowe"
-#           find . -name '*.md' -type f -exec sh -c 'pandoc "{}" --pdf-engine=wkhtmltopdf -o "../wersje pdf/{}.pdf"' \;
-#           cd ../
-#           cd "wersje pdf"
-#           for f in ./*; do mv "$f" "${f%.md.pdf}.pdf" ; done
-#       - uses: baileyjm02/markdown-to-pdf@v1.2.0
-#         with:
-#           input_path: wersje tekstowe
-#           output_dir: Ustawy - format PDF
-#           # Default is true, can set to false to only get PDF files
-#           build_html: false
-# #           build_pdf: true
-#       - name: Install wkhtmltopdf
-#         run: sudo apt-get install -y wkhtmltopdf
-#       - name: Install fonts
-# #         run: sudo apt-get install -y fonts-dejavu-core
-#       - name: Convert to PDF
-#         run: |
-#           cd wersje\ tekstowe
-#           find . -name '*.md' -type f -exec sh -c 'wkhtmltopdf --enable-local-file-access --margin-top 0mm --margin-right 0mm --margin-bottom 0mm --margin-left 0mm --page-size A4 --no-background --no-outline --dpi 300 --footer-spacing 0 -T 0mm -R 0mm -B 0mm -L 0mm --header-spacing 0 -t pdf --encoding utf-8 --quiet --quiet "{}" "../wersje pdf/{}.pdf"' \;
 #       - name: GIT commit+push wygenerowane pliki PDF
 #         run: |
 #           pwd
@@ -85,8 +60,14 @@ jobs:
 #        with:
 #          name: ${{ env.PDF_DIR_NAME }}
 #          path: ${{ env.PDF_DIR_NAME }}
+      - uses: vimtor/action-zip@v1
+        with:
+          files: |
+            ${{ env.PDF_DIR_NAME }}/*.pdf
+          dest: ustawy-o-pit-pdf.zip
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
             ${{ env.PDF_DIR_NAME }}/*.pdf
+            ${{ env.PDF_DIR_NAME }}/ustawy-o-pit-pdf.zip
