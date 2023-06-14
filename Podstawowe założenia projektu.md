@@ -8,7 +8,7 @@ Podstawowe założenie regulacji to niskie i proste podatki, automatyzacja rozli
 
 Kwota wolna od podatku jest kluczowa z punktu widzenia najbiedniejszych oraz wchodzących na rynek pracy. Sztywna kwota wolna w kontekście galopującej inflacji i postępujących zmian na rynku pracy jest narzędziem politycznym. Jest jak jałmużna, którą ustawodawca może dać, albo może nie dać, niezależnie od obiektywnych zmiennych. Pora z tym skończyć - wyższa, uzależniona od płacy minimalnej kwota wolna, jest gwarantem tego, że będzie ona stabilnie rosnąć, wraz z zarobkami Polaków - przestanie być w pełni zależnym od woli polityków narzędziem.
 
-- **Likwidacja drugiego progu podatkowego.**
+- **Likwidacja drugiego progu podatkowego**
 
 Drugi próg podatkowy tworzy szklany sufit nie dla tych najlepiej zarabiających, a dla tych na dorobku. Sztywna kwota, która go reguluje, tworzy iluzję progresji podatkowej. Skala podatkowa zaś, jako taka, nigdy nie dotyczyła najbogatszych - ci rozliczali się np. liniowo, podatkiem zryczałtowanym lub od zysków kapitałowych. Zatrudniony po przekroczeniu drugiego progu podatkowego płacił 32% podatku, 9% składki zdrowotnej, do tego ZUS. Tymczasem przedsiębiorcy od lat rozliczali się podatkiem liniowym, zryczałtowanym, lub płacili podatek od zysków kapitałowych - a nie podatek progresywny. Należy skończyć z fikcją, że drugi próg uderza w najbogatszych i wprowadzić powszechny podatek liniowy - równy i sprawiedliwy.
 
