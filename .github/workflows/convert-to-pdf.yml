@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'wersje tekstowe/**.md'
+#    paths:
+#      - 'wersje tekstowe/**.md'
 
 jobs:
   wersje_tekstowe_do_pdf:
