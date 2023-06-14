@@ -62,8 +62,7 @@ jobs:
 #          path: ${{ env.PDF_DIR_NAME }}
       - uses: vimtor/action-zip@v1
         with:
-          files: |
-            ${{ env.PDF_DIR_NAME }}/*.pdf
+          files: ${{ env.PDF_DIR_NAME }}/*.pdf
           dest: ustawy-o-pit-pdf.zip
       - name: Release
         uses: softprops/action-gh-release@v1
