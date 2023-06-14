@@ -10,6 +10,7 @@ jobs:
   wersje_tekstowe_do_pdf:
     name: Tworzenie PDFow z wersji tekstowych
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
     env: 
 #       CI_COMMIT_MESSAGE: Pliki PDF utworzone na podstawie wersji tekstowych
 #       CI_COMMIT_AUTHOR: Automat
