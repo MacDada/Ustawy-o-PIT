@@ -7,6 +7,17 @@ on: [push, pull_request]
 #      - 'wersje tekstowe/**.md'
 
 jobs:
+  tag:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 12
+    steps:
+      - uses: phish108/autotag-action@v1.1.55
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN}}
+
   generate_pdfs:
     name: Tworzenie PDFow z wersji tekstowych
     runs-on: ubuntu-latest
