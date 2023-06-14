@@ -1,11 +1,13 @@
-name: Auto tagowanie
+# Automatycznie tworzy tag na najnowszym commicie,
+# generuje PDFy i ZIPa z PDFami,
+# w końcu publikuje z tych plików release na tagu.
+name: Automatyczny release z PDFami
 on:
   push:
     branches:
       - main
     paths:
       - '*.md'
-
 jobs:
   tag:
     runs-on: ubuntu-latest
@@ -16,7 +18,8 @@ jobs:
         node-version:
           - 12
     steps:
-      - uses: phish108/autotag-action@v1.1.55
+      - name: Utworzenie git taga pod release
+        uses: phish108/autotag-action@v1.1.55
         id: tagger
         with:
           github-token: ${{ secrets.GITHUB_TOKEN}}
@@ -53,8 +56,6 @@ jobs:
           done
 
           zip -r ustawy-o-pit-pdf.zip "${{ env.PDF_DIR_NAME }}"
-          
-          echo "wersja: ${{ steps.tagger.outputs.new-tag }}"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
