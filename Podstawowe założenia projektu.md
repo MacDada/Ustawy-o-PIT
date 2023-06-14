@@ -20,7 +20,7 @@ Proponowane przepisy wprost pozwalają rozliczyć podatnikowi połowę kwoty wol
 
 Danina solidarnościowa jest nieszczelnym podatkiem, obejmującym część dochodów powyżej miliona złotych, wprowadzonym z przyczyn propagandowych - w teorii jako pomoc dla osób niepełnosprawnych. Propaganda jak zwykle okazała się tylko propagandą, a środki z daniny zostały roztrwonione niezgodnie z zakładanym przeznaczeniem.
 
-- **Ucięcie sporów o źródła przychodów u sportowców i artystów**
+- **Ucięcie sporów o źródła przychodów u sportowców i artystów.**
 
 Wciąż powracające spory o to, jak powinni rozliczać się artyści i sportowcy wymagają w końcu rozwiązania. Stąd propozycja jednoznacznego umożliwienia im rozliczania się jako przedsiębiorcy i dodanie nowej, obniżonej stawki ryczałtu dla tej grupy. Zachęcajmy polskie gwiazdy wielkiego formatu do rozliczania się w kraju, zamiast szukania optymalizacji za granicą.
 
