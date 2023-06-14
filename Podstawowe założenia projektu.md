@@ -16,7 +16,7 @@ Drugi próg podatkowy tworzy szklany sufit nie dla tych najlepiej zarabiających
 
 Proponowane przepisy wprost pozwalają rozliczyć podatnikowi połowę kwoty wolnej, w przypadku opieki naprzemiennej. Regulacja ta stawia rodziców wykonujących opiekę naprzemienną w sytuacji pośredniej, pomiędzy rodzicami wychowującymi dzieci samotnie, a rodzicami wychowującymi dzieci wspólnie, co dobrze oddaje charakter opieki naprzemiennej w kontekście jej ekonomicznego ciężaru.
 
-- **Likwidacja daniny solidarnościowej.**
+- **Likwidacja daniny solidarnościowej**
 
 Danina solidarnościowa jest nieszczelnym podatkiem, obejmującym część dochodów powyżej miliona złotych, wprowadzonym z przyczyn propagandowych - w teorii jako pomoc dla osób niepełnosprawnych. Propaganda jak zwykle okazała się tylko propagandą, a środki z daniny zostały roztrwonione niezgodnie z zakładanym przeznaczeniem.
 
