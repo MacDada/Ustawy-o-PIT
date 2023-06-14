@@ -49,7 +49,7 @@ jobs:
               --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
           done
 
-          ls -alh "../${{ env.PDF_DIR_NAME }}/*"
+          ls "../${{ env.PDF_DIR_NAME }}/"
 #       - name: Generate PDF with pandoc
 #         run: |
 #           mkdir "wersje pdf"
