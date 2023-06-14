@@ -1,8 +1,8 @@
 name: Wersje tekstowe do PDF
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
+#  push:
+#    branches:
+#      - main
 #    paths:
 #      - 'wersje tekstowe/**.md'
 
