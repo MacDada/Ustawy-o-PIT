@@ -48,6 +48,9 @@ jobs:
               --variable header-includes="\exhyphenpenalty=10000" \
               --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
           done
+          
+          cd ..
+          zip -r ustawy-o-pit-pdf.zip "${{ env.PDF_DIR_NAME }}"
 #       - name: GIT commit+push wygenerowane pliki PDF
 #         run: |
 #           pwd
@@ -60,10 +63,6 @@ jobs:
 #        with:
 #          name: ${{ env.PDF_DIR_NAME }}
 #          path: ${{ env.PDF_DIR_NAME }}
-      - uses: vimtor/action-zip@v1
-        with:
-          files: "${{ env.PDF_DIR_NAME }}"
-          dest: ustawy-o-pit-pdf.zip
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
