@@ -78,7 +78,12 @@ jobs:
 #           git add "wersje pdf"
 #           git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
 #           git push          
-      - uses: actions/upload-artifact@v3.1.2
+#      - uses: actions/upload-artifact@v3.1.2
+#        with:
+#          name: ${{ env.PDF_DIR_NAME }}
+#          path: ${{ env.PDF_DIR_NAME }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: ${{ env.PDF_DIR_NAME }}
-          path: ${{ env.PDF_DIR_NAME }}
+          files: |
+            ${{ env.PDF_DIR_NAME }}/*.pdf
