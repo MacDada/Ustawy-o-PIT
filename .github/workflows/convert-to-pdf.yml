@@ -30,8 +30,6 @@ jobs:
 
           mkdir "${{ env.PDF_DIR_NAME }}"
 
-          cd "wersje tekstowe" || exit
-
           for md_file in ./*.md; do
             # https://pandoc.org/MANUAL.html#layout
             # https://pandoc.org/MANUAL.html#fonts
@@ -46,10 +44,9 @@ jobs:
               --variable fontsize=12pt \
               --variable header-includes="\hyphenpenalty=10000" \
               --variable header-includes="\exhyphenpenalty=10000" \
-              --output "../${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
+              --output "${{ env.PDF_DIR_NAME }}/${md_file%.md}.pdf"
           done
-          
-          cd ..
+
           zip -r ustawy-o-pit-pdf.zip "${{ env.PDF_DIR_NAME }}"
 #       - name: GIT commit+push wygenerowane pliki PDF
 #         run: |

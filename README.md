@@ -6,8 +6,8 @@ Podstawowe założenie regulacji to niskie i proste podatki, automatyzacja rozli
 
 ## Pobierz najnowsze wersje PDF ustaw
 
-* [Podstawowe założenia projektu – pobierz PDF](https://github.com/ProjektyUstaw/Ustawy-o-PIT/releases/latest/download/Podstawowe.zalozenia.projektu.pdf)
-* [PIT dla inwestorów – pobierz PDF](https://github.com/ProjektyUstaw/Ustawy-o-PIT/releases/latest/download/PIT.dla.inwestorow.-.ustawa.pdf)
-* [PIT dla przedsiębiorców – pobierz PDF](https://github.com/ProjektyUstaw/Ustawy-o-PIT/releases/latest/download/PIT.dla.przedsiebiorcow.-.ustawa.pdf)
-* [PIT dla zatrudnionych – pobierz PDF](https://github.com/ProjektyUstaw/Ustawy-o-PIT/releases/latest/download/PIT.dla.zatrudnionych.-.ustawa.pdf)
-* [Pobierz wszystko w ZIP](https://github.com/ProjektyUstaw/Ustawy-o-PIT/releases/latest/download/ustawy-o-pit-pdf.zip)
+* [Podstawowe założenia projektu – pobierz PDF](https://github.com/MacDada/Ustawy-o-PIT/releases/latest/download/Podstawowe.zalozenia.projektu.pdf)
+* [PIT dla inwestorów – pobierz PDF](https://github.com/MacDada/Ustawy-o-PIT/releases/latest/download/PIT.dla.inwestorow.-.ustawa.pdf)
+* [PIT dla przedsiębiorców – pobierz PDF](https://github.com/MacDada/Ustawy-o-PIT/releases/latest/download/PIT.dla.przedsiebiorcow.-.ustawa.pdf)
+* [PIT dla zatrudnionych – pobierz PDF](https://github.com/MacDada/Ustawy-o-PIT/releases/latest/download/PIT.dla.zatrudnionych.-.ustawa.pdf)
+* [Pobierz wszystko w ZIP](https://github.com/MacDada/Ustawy-o-PIT/releases/latest/download/ustawy-o-pit-pdf.zip)
